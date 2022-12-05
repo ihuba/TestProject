@@ -1,0 +1,10 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=1b325d9c_002Df34d_002D4f7f_002Db9b8_002D54129e65a933/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;And&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;NUnit3x::9BF54068-8DC8-448F-845E-87E89E6773F3::net6.0::TestProject.Tests.OrderTotalCalculation.OrderTotalCalculationApiTests.VerifyCalculationOfOrderTotalWithoutDiscount&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+    &lt;Project Location="C:\Users\IlliaHubarets\RiderProjects\TestProject\TestProject.Tests" Presentation="&amp;lt;TestProject.Tests&amp;gt;" /&gt;&#xD;
+    &lt;Namespace&gt;TestProject.Tests.OrderTotalCalculation&lt;/Namespace&gt;&#xD;
+  &lt;/And&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
