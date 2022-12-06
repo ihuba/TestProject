@@ -12,7 +12,8 @@ namespace TestProject.Tests.OrderTotalCalculation
         private List<int> _testOrderIds = new();
 
         [Test]
-        [Description("{TestCaseId}")]
+        [Description("Scenario: Calculation Of Order Without Discount")]
+        
         public void VerifyCalculationOfOrderTotalWithoutDiscount()
         {
             var order = Builders.OrderBuilders.AddGuestsOrderBuilder
@@ -34,7 +35,7 @@ namespace TestProject.Tests.OrderTotalCalculation
         }
 
         [Test]
-        [Description("{TestCaseId}")]
+        [Description("Scenario: Calculation Of Order With Discount")]
         public void VerifyCalculationOfOrderTotalWithDiscount()
         {
             var orderBuilder = Builders.OrderBuilders.AddGuestsOrderBuilder
@@ -74,7 +75,7 @@ namespace TestProject.Tests.OrderTotalCalculation
                 .WithDrinksWithDiscount(0).WithDrinksWithoutDiscount(1).WithMainsCount(1).WithStartersCount(1);
             var orderOfFourGuests = orderBuilder.Build();
 
-            var expectedTotalOfOrderWithDiscountOfFourGuests = CalculateOrdersTotal(orderOfFourGuests);
+            var expectedTotalOfOrderWithoutDiscountOfFourGuests = CalculateOrdersTotal(orderOfFourGuests);
             var orderReceiptForFourGuests =
                 TestProjectClient.OrderActions.PostRequestOrderCalculation(orderOfFourGuests);
             _testOrderIds.Add(orderReceiptForFourGuests.OrderId);
@@ -88,7 +89,7 @@ namespace TestProject.Tests.OrderTotalCalculation
             var expectedTotalAfterCancellation = CalculateOrdersTotal(orderAfterCancellation);
 
             using var _ = new AssertionScope();
-            orderReceiptForFourGuests.OrderTotal.Should().Be(expectedTotalOfOrderWithDiscountOfFourGuests);
+            orderReceiptForFourGuests.OrderTotal.Should().Be(expectedTotalOfOrderWithoutDiscountOfFourGuests);
             orderReceiptAfterCancellation.OrderTotal.Should().Be(expectedTotalAfterCancellation);
         }
 
